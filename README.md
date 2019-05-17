@@ -1,68 +1,131 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# no db structure plan
 
-## Available Scripts
+## frontend-checklist
 
-In the project directory, you can run:
+- Reset.css
+- package.json
+  - main
+  - proxy
+    - port :
 
-### `npm start`
+## front-end folder structure
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- src/
+  - App.js
+  - index.js
+  - components/
+    - Char Sheet/
+      - CharSheet.js
+      - CharSheet.css
+      - Header/
+        - Header.js
+        - Header.css
+      - Stat Block/
+        - stats.js
+        - stats.css
+      - Conditions/
+        - conditions.js
+        - conditions.css
+      - Attack/
+        - Attack.js
+        - Attack.css
+      - Inventory/
+        - Inventory.js
+        - Inventory.css
+    - Sidebar/
+      - Sidebar.js
+      - Sidebar.css
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## dependencies
 
-### `npm test`
+`axios`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## backend-checklist
 
-### `npm run build`
+port =
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## back-end folder structure
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- server/
+  - Index.js
+  - controller/
+    - sheetController.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## dependencies
 
-### `npm run eject`
+`express`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## routes
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+get: '/api/char_sheets'
+get: '/api/char_sheets/:id'
+post: '/api/new_sheet'
+put: '/api/char_sheets/:id'
+delete: '/api/char_sheets/:id'
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## objects outline
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```js
+charSheetObj
+{
+    id: num,
+    isFamiliar: bool, // optional
+    Name: str,
+    Class: str,
+    Race: str,
+    Level: num,
+    Exp: num,
+    Str: num,
+    Dex: num,
+    Con: num,
+    Int: num,
+    Wis: num,
+    Char: num,
+    AC: num,
+    HP: num,
+    ProforGeneric: num,
+    MvSpeed: num,
+    StrSv: num,
+    DexSv: num,
+    ConSv: num,
+    IntSv: num,
+    WisSv: num,
+    CharSv: num,
+    Languages: str,
+    ConditionsorEnchants: arr,
+    ResistorWeakness: arr,
+    Deity: str,
+    Familiar: {charSheetObj.isFamiliar === true}, // optional
+    Attacks: [ {wepObj} ],
+    Inventory: [strs],
+    Spells: [ {splObj} ],
+    Wealth: {moneyObj}
+}
 
-## Learn More
+wepObj {
+    Name: str,
+    toHit: str,
+    Damage: str,
+    Range: str,
+    Notes: str
+}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+spellObj {
+    Name: str,
+    SpellLevel: num,
+    CastTime: str,
+    Range: str,
+    Components: str,
+    Duration: str,
+    Description: str
+}
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+moneyObj {
+    Plat: num,
+    Gold: num,
+    Silver: num,
+    Copper: num
+}
+```
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### usefull tech
