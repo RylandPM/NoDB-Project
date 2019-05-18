@@ -10,7 +10,7 @@ module.exports = {
   },
   postNewSheet: (req, res, next) => {
     const newSheet = req.body;
-    newSheet.id = characterCollection.length + 1;
+    newSheet.id = characterCollection[characterCollection.length - 1].id + 1;
     characterCollection.push(newSheet);
     res.status(200).send(characterCollection);
   },
