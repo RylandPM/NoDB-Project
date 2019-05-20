@@ -1,0 +1,7 @@
+.HeaderM {
+    border-color: black;
+    border-width: medium;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+}

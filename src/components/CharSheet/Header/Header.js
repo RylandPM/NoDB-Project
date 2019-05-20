@@ -14,7 +14,7 @@ export default function Header(props) {
   } = props;
   let Name;
   return (
-    <div className="Header">
+    <div className="HeaderM">
       <div className="Right corner">
         <div className="Name">
           <span>Name: {newName}</span>

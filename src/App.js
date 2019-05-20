@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./reset.css"
 import "./App.css";
 import axios from "axios";
 import CharSheet from "./components/CharSheet/CharSheet";
@@ -54,6 +55,10 @@ export default class App extends Component {
 
   componentDidMount() {
     this.myCharacterCollection();
+    this.postNewCharacter()
+    this.getCharacter()
+    this.updateCharacter()
+    this.deleteCharacter()
   }
 
   myCharacterCollection() {
@@ -62,6 +67,7 @@ export default class App extends Component {
         characterCollection: response.data
       });
     });
+    console.log(this.state.characterCollection)
   }
 
   getCharacter(id) {
@@ -97,14 +103,13 @@ export default class App extends Component {
   }
 
   render() {
-    console.log(this.state.newSheet);
     const { characterCollection, newSheet } = this.state;
     return (
-      <div>
+      <div className="Display">
         <div className="CharacterSheetDisplay">
-          <CharSheet newSheet={newSheet} post={this.postNewCharacter} update={this.updateCharacter} />
+          <CharSheet newSheet={newSheet} postNewCharacter={this.postNewCharacter} update={this.updateCharacter} />
         </div>
-        <button onClick={() => {myCharacterCollection()}}>Load Character Collection</button>
+        <button className="GetButton" onClick={() => {this.myCharacterCollection()}}>Load Character Collection</button>
         <div className="savedCharsSidebar">
           <Sidebar characterCollection={characterCollection} newSheet={newSheet} deleteChar={this.deleteCharacter} getSpecific={this.getCharacter} />
         </div>

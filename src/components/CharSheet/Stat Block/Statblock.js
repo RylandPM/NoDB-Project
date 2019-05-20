@@ -25,11 +25,11 @@ export default function StatBlock(props) {
   } = props;
   let Name;
   return (
-    <div>
+    <div className="StatSheet">
       <div className="main stats">
         <div className="Strength">
           <span>Str: {newStr}</span>
-          <span>{parseInt((newStr - 10) / 2)}</span>
+          <span>, {parseInt((newStr - 10) / 2)} </span>
           <button
             onClick={() => {
               if (display === true) {
@@ -61,7 +61,7 @@ export default function StatBlock(props) {
         </div>
         <div className="Dexterity">
           <span>Dex: {newDex}</span>
-          <span>{parseInt((newDex - 10) / 2)}</span>
+          <span>, {parseInt((newDex - 10) / 2)} </span>
           <button
             onClick={() => {
               if (display === true) {
@@ -93,7 +93,7 @@ export default function StatBlock(props) {
         </div>
         <div className="Constitution">
           <span>Con: {newCon}</span>
-          <span>{parseInt((newCon - 10) / 2)}</span>
+          <span>, {parseInt((newCon - 10) / 2)} </span>
           <button
             onClick={() => {
               if (display === true) {
@@ -125,7 +125,7 @@ export default function StatBlock(props) {
         </div>
         <div className="Intelligence">
           <span>Int: {newInt}</span>
-          <span>{parseInt((newInt - 10) / 2)}</span>
+          <span>, {parseInt((newInt - 10) / 2)} </span>
           <button
             onClick={() => {
               if (display === true) {
@@ -157,7 +157,7 @@ export default function StatBlock(props) {
         </div>
         <div className="Wisdom">
           <span>Wis: {newWis}</span>
-          <span>{parseInt((newWis - 10) / 2)}</span>
+          <span>, {parseInt((newWis - 10) / 2)} </span>
           <button
             onClick={() => {
               if (display === true) {
@@ -189,7 +189,7 @@ export default function StatBlock(props) {
         </div>
         <div className="Charisma">
           <span>Char: {newChar}</span>
-          <span>{parseInt((newChar - 10) / 2)}</span>
+          <span>, {parseInt((newChar - 10) / 2)} </span>
           <button
             onClick={() => {
               if (display === true) {
@@ -370,7 +370,7 @@ export default function StatBlock(props) {
               <button
                 onClick={() => {
                   changeHandler("display", false);
-                  changeHandler("newName", Name);
+                  changeHandler("newStrSv", Name);
                 }}
               >
                 Save

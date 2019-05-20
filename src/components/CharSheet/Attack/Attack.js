@@ -9,7 +9,7 @@ export default function Attacks(props) {
     })
 
     return (
-        <div>
+        <div className="attackWrapper">
             <div className="Attacks">
                 <ul>
                     Attacks: {attacksArr}

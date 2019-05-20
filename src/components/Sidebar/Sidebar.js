@@ -4,7 +4,7 @@ import "./Sidebar.css"
 export default function Sidebar(props) {
     const { characterCollection, newSheet, deleteChar, getSpecific } = props
     const mappedCharacters = characterCollection.map(element => {
-        return( <div className="display">
+        return( <div>
                     <div>{element.Name}</div>
                     <div>{element.Class}</div>
                     <div>{element.Race}</div>
@@ -15,7 +15,7 @@ export default function Sidebar(props) {
             )
     })
     return (
-        <div>
+        <div  className="displaySB">
             <h2>Character List</h2>
             <div>{mappedCharacters}</div>
         </div>

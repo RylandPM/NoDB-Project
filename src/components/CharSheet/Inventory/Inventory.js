@@ -12,8 +12,8 @@ export default function Inventory(props) {
     })
     
     return (
-        <div>
-        <div>
+        <div className="InventoryBlock">
+        <div className="LeftSide">
             <div className="Inventory">
                 <ul>
                     Inventory: {inventoryArr}
@@ -48,8 +48,8 @@ export default function Inventory(props) {
         ) : null}
             </div>
         </div>
-        <div>
-        <div className="Inventory">
+        <div className="RightSide">
+        <div className="Spells">
             <ul>
                 Spells: {spellsArr}
             </ul>
@@ -82,7 +82,7 @@ export default function Inventory(props) {
       </div>
     ) : null}
         </div>
-    </div>
+    <div className="Wealth">
     <div>
         <div className="Platinum">
             <div>
@@ -222,6 +222,8 @@ export default function Inventory(props) {
     </div>
     ) : null}
         </div>
+    </div>
+    </div>
     </div>
     </div>
     )

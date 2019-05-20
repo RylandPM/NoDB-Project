@@ -66,7 +66,7 @@ export default class Sheet extends Component {
   render() {
     const { newSheet } = this.props;
     let {
-      post,
+      postNewCharacter,
       update
     } = this.state
     const {
@@ -103,41 +103,41 @@ export default class Sheet extends Component {
       newWealth,
       display
     } = this.state;
-    if(newSheet.id !== 0){
-      this.setState({
-        newName: newSheet.Name,
-        newClass: newSheet.Class,
-        newRace: newSheet.Race,
-        newLevel: newSheet.Level,
-        newExp: newSheet.Exp,
-        newStr: newSheet.Str,
-        newDex: newSheet.Dex,
-        newCon: newSheet.Con,
-        newInt: newSheet.Int,
-        newWis: newSheet.Wis,
-        newChar: newSheet.Char,
-        newAC: newSheet.AC,
-        newHP: newSheet.HP,
-        newProforGeneric: newSheet.ProforGeneric,
-        newMvSpeed: newSheet.MvSpeed,
-        newStrSv: newSheet.StrSv,
-        newDexSv: newSheet.DexSv,
-        newConSv: newSheet.ConSv,
-        newIntSv: newSheet.IntSv,
-        newWisSv: newSheet.WisSv,
-        newCharSv: newSheet.CharSv,
-        newLanguages: newSheet.Languages,
-        newConditionsorEnchants: newSheet.ConditionsorEnchants,
-        newFeats: newSheet.Feats,
-        newResistorWeakness: newSheet.ResistorWeakness,
-        newDeity: newSheet.Deity,
-        newFamiliar: newSheet.Familiar, // optional
-        newAttacks: newSheet.Attacks,
-        newInventory: newSheet.Inventory,
-        newSpells: newSheet.Spells,
-        newWealth: newSheet.Wealth
-      })
-    }
+    // if(newSheet.id !== 0){
+    //   this.setState({
+    //     newName: newSheet.Name,
+    //     newClass: newSheet.Class,
+    //     newRace: newSheet.Race,
+    //     newLevel: newSheet.Level,
+    //     newExp: newSheet.Exp,
+    //     newStr: newSheet.Str,
+    //     newDex: newSheet.Dex,
+    //     newCon: newSheet.Con,
+    //     newInt: newSheet.Int,
+    //     newWis: newSheet.Wis,
+    //     newChar: newSheet.Char,
+    //     newAC: newSheet.AC,
+    //     newHP: newSheet.HP,
+    //     newProforGeneric: newSheet.ProforGeneric,
+    //     newMvSpeed: newSheet.MvSpeed,
+    //     newStrSv: newSheet.StrSv,
+    //     newDexSv: newSheet.DexSv,
+    //     newConSv: newSheet.ConSv,
+    //     newIntSv: newSheet.IntSv,
+    //     newWisSv: newSheet.WisSv,
+    //     newCharSv: newSheet.CharSv,
+    //     newLanguages: newSheet.Languages,
+    //     newConditionsorEnchants: newSheet.ConditionsorEnchants,
+    //     newFeats: newSheet.Feats,
+    //     newResistorWeakness: newSheet.ResistorWeakness,
+    //     newDeity: newSheet.Deity,
+    //     newFamiliar: newSheet.Familiar, // optional
+    //     newAttacks: newSheet.Attacks,
+    //     newInventory: newSheet.Inventory,
+    //     newSpells: newSheet.Spells,
+    //     newWealth: newSheet.Wealth
+    //   })
+    // }
     return (
       <div className="CharacterSheet">
         <div className="Header">
@@ -152,7 +152,7 @@ export default class Sheet extends Component {
             display={display}
           />
         </div>
-        <div classname="Stats+Conditions">
+        <div classname="Stats">
           <Statblock
             changeHandler={this.changeHandler}
             newSheet={newSheet}
@@ -174,6 +174,8 @@ export default class Sheet extends Component {
             newCharSv={newCharSv}
             display={display}
           />
+          </div>
+          <div className="Conditions">
           <Conditions
             pushBot={this.pushBot}
             changeHandler={this.changeHandler}
@@ -204,8 +206,8 @@ export default class Sheet extends Component {
             Copper={newWealth.Copper}
           />
         </div>
-        <button onClick={post(newSheet)}>Post New Sheet</button>
-        <button onClick={update(newSheet.id, newSheet)}>Update Sheet</button>
+        {/* <button onClick={postNewCharacter(newSheet)}>Post New Sheet</button>
+        <button onClick={update(newSheet.id, newSheet)}>Update Sheet</button> */}
       </div>
     );
   }

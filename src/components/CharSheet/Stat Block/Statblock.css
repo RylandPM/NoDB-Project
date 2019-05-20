@@ -1,0 +1,10 @@
+.StatSheet {
+    height: 100%;
+    width: 100%;
+    border-style: solid;
+    border-color: black;
+    border-width: medium;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}

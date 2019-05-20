@@ -30,7 +30,8 @@ export default function Conditions(props) {
   });
 
   return (
-    <div>
+    <div className="Condition">
+      <div className="block1">
       <div className="Languages">
         <span>Languages: {newLanguages}</span>
         <button
@@ -41,7 +42,7 @@ export default function Conditions(props) {
               changeHandler("display", true);
             }
           }}
-        >
+          >
           edit
         </button>
         {display ? (
@@ -50,13 +51,13 @@ export default function Conditions(props) {
               onChange={e => {
                 Name = e.target.value;
               }}
-            />
+              />
             <button
               onClick={() => {
                 changeHandler("display", false);
                 changeHandler("newLanguages", Name);
               }}
-            >
+              >
               Save
             </button>
           </div>
@@ -72,7 +73,7 @@ export default function Conditions(props) {
               changeHandler("display", true);
             }
           }}
-        >
+          >
           edit
         </button>
         {display ? (
@@ -81,18 +82,20 @@ export default function Conditions(props) {
               onChange={e => {
                 Name = e.target.value;
               }}
-            />
+              />
             <button
               onClick={() => {
                 changeHandler("display", false);
                 pushBot("newConditionsorEnchants", Name);
               }}
-            >
+              >
               Save
             </button>
           </div>
         ) : null}
       </div>
+        </div>
+        <div className="block2">
       <div className="Resists or Weaknesses">
         <ul>Resists or Weaknesses: {resistsArr}</ul>
         <button
@@ -103,7 +106,7 @@ export default function Conditions(props) {
               changeHandler("display", true);
             }
           }}
-        >
+          >
           edit
         </button>
         {display ? (
@@ -112,13 +115,13 @@ export default function Conditions(props) {
               onChange={e => {
                 Name = e.target.value;
               }}
-            />
+              />
             <button
               onClick={() => {
                 changeHandler("display", false);
                 pushBot("newResistorWeakness", Name);
               }}
-            >
+              >
               Save
             </button>
           </div>
@@ -134,7 +137,7 @@ export default function Conditions(props) {
               changeHandler("display", true);
             }
           }}
-        >
+          >
           edit
         </button>
         {display ? (
@@ -143,18 +146,20 @@ export default function Conditions(props) {
               onChange={e => {
                 Name = e.target.value;
               }}
-            />
+              />
             <button
               onClick={() => {
                 changeHandler("display", false);
                 changeHandler("newDeity", Name);
               }}
-            >
+              >
               Save
             </button>
           </div>
         ) : null}
       </div>
+        </div>
+        <div className="block3">
       <div className="Feats">
         <ul>Feats: {featsArr}</ul>
         <button
@@ -165,7 +170,7 @@ export default function Conditions(props) {
               changeHandler("display", true);
             }
           }}
-        >
+          >
           edit
         </button>
         {display ? (
@@ -174,13 +179,13 @@ export default function Conditions(props) {
               onChange={e => {
                 Name = e.target.value;
               }}
-            />
+              />
             <button
               onClick={() => {
                 changeHandler("display", false);
                 pushBot("newFeats", Name);
               }}
-            >
+              >
               Save
             </button>
           </div>
@@ -196,7 +201,7 @@ export default function Conditions(props) {
               changeHandler("display", true);
             }
           }}
-        >
+          >
           edit
         </button>
         {display ? (
@@ -205,18 +210,19 @@ export default function Conditions(props) {
               onChange={e => {
                 Name = e.target.value;
               }}
-            />
+              />
             <button
               onClick={() => {
                 changeHandler("display", false);
                 changeHandler("newFamiliar", Name);
               }}
-            >
+              >
               Save
             </button>
           </div>
         ) : null}
       </div>
+        </div>
     </div>
   );
 }

@@ -1,0 +1,55 @@
+.InventoryBlock {
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-content: left;
+}
+
+.LeftSide {
+    height: 100%;
+    width: 50%;
+    border-style: solid;
+    border-color: black;
+    border-width: medium;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.RightSide {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.Spells {
+    height: 60%;
+    width: 100%;
+    border-style: solid;
+    border-color: black;
+    border-width: medium;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.Wealth {
+    height: 40%;
+    width: 100%;
+    border-style: solid;
+    border-color: black;
+    border-width: medium;
+    display: flex;
+    flex-direction: column;
+}
+
+.Inventory > button {
+    height: 5%;
+
+}
+.Spells > button {
+    height: 5%;
+}
