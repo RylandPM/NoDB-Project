@@ -28,7 +28,7 @@ export default function Conditions(props) {
   let featsArr = newFeats.map(element => {
     return <li>{element}</li>;
   });
-  console.log(display);
+
   return (
     <div>
       <div className="Languages">
@@ -85,7 +85,7 @@ export default function Conditions(props) {
             <button
               onClick={() => {
                 changeHandler("display", false);
-                changeHandler("newConditionsorEnchants", Name);
+                pushBot("newConditionsorEnchants", Name);
               }}
             >
               Save
@@ -187,7 +187,7 @@ export default function Conditions(props) {
         ) : null}
       </div>
       <div className="Familiar">
-        <span>Future Project</span>
+        <span>Familiar: Future Project</span>
         <button
           onClick={() => {
             if (display === true) {

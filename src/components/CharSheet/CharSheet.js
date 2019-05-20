@@ -41,7 +41,12 @@ export default class Sheet extends Component {
       newAttacks: [],
       newInventory: [],
       newSpells: [],
-      newWealth: {},
+      newWealth: {
+        Platinum: 0,
+        Gold: 0,
+        Silver: 0,
+        Copper: 0
+      },
       display: false
     };
     this.changeHandler = this.changeHandler.bind(this);
@@ -60,6 +65,10 @@ export default class Sheet extends Component {
 
   render() {
     const { newSheet } = this.props;
+    let {
+      post,
+      update
+    } = this.state
     const {
       newName,
       newClass,
@@ -94,6 +103,41 @@ export default class Sheet extends Component {
       newWealth,
       display
     } = this.state;
+    if(newSheet.id !== 0){
+      this.setState({
+        newName: newSheet.Name,
+        newClass: newSheet.Class,
+        newRace: newSheet.Race,
+        newLevel: newSheet.Level,
+        newExp: newSheet.Exp,
+        newStr: newSheet.Str,
+        newDex: newSheet.Dex,
+        newCon: newSheet.Con,
+        newInt: newSheet.Int,
+        newWis: newSheet.Wis,
+        newChar: newSheet.Char,
+        newAC: newSheet.AC,
+        newHP: newSheet.HP,
+        newProforGeneric: newSheet.ProforGeneric,
+        newMvSpeed: newSheet.MvSpeed,
+        newStrSv: newSheet.StrSv,
+        newDexSv: newSheet.DexSv,
+        newConSv: newSheet.ConSv,
+        newIntSv: newSheet.IntSv,
+        newWisSv: newSheet.WisSv,
+        newCharSv: newSheet.CharSv,
+        newLanguages: newSheet.Languages,
+        newConditionsorEnchants: newSheet.ConditionsorEnchants,
+        newFeats: newSheet.Feats,
+        newResistorWeakness: newSheet.ResistorWeakness,
+        newDeity: newSheet.Deity,
+        newFamiliar: newSheet.Familiar, // optional
+        newAttacks: newSheet.Attacks,
+        newInventory: newSheet.Inventory,
+        newSpells: newSheet.Spells,
+        newWealth: newSheet.Wealth
+      })
+    }
     return (
       <div className="CharacterSheet">
         <div className="Header">
@@ -143,17 +187,25 @@ export default class Sheet extends Component {
             display={display}
           />
         </div>
-        {/* <div className="Attack">
-          <Attack newSheet={newSheet} newAttacks={newAttacks} />
+        <div className="Attack">
+          <Attack newSheet={newSheet} newAttacks={newAttacks} pushBot={this.pushBot} display={display} changeHandler={this.changeHandler} />
         </div>
         <div className="Inventory">
           <Inventory
+            pushBot={this.pushBot}
+            changeHandler={this.changeHandler}
+            display={display}
             newSheet={newSheet}
             newInventory={newInventory}
             newSpells={newSpells}
-            newWealth={newWealth}
+            Platinum={newWealth.Platinum}
+            Gold={newWealth.Gold}
+            Silver={newWealth.Silver}
+            Copper={newWealth.Copper}
           />
-        </div> */}
+        </div>
+        <button onClick={post(newSheet)}>Post New Sheet</button>
+        <button onClick={update(newSheet.id, newSheet)}>Update Sheet</button>
       </div>
     );
   }

@@ -11,6 +11,7 @@ export default class App extends Component {
     this.state = {
       characterCollection: [],
       newSheet: {
+        id: 0,
         Name: "",
         Class: "",
         Race: "",
@@ -45,6 +46,10 @@ export default class App extends Component {
       }
     };
     this.myCharacterCollection = this.myCharacterCollection.bind(this);
+    this.getCharacter=this.getCharacter.bind(this)
+    this.postNewCharacter=this.postNewCharacter.bind(this)
+    this.updateCharacter=this.updateCharacter.bind(this)
+    this.deleteCharacter=this.deleteCharacter.bind(this)
   }
 
   componentDidMount() {
@@ -97,11 +102,12 @@ export default class App extends Component {
     return (
       <div>
         <div className="CharacterSheetDisplay">
-          <CharSheet newSheet={newSheet} />
+          <CharSheet newSheet={newSheet} post={this.postNewCharacter} update={this.updateCharacter} />
         </div>
-        {/* <li className="savedCharsSidebar">
-          <Sidebar characterCollection={characterCollection} newSheet={newSheet} />
-        </li> */}
+        <button onClick={() => {myCharacterCollection()}}>Load Character Collection</button>
+        <div className="savedCharsSidebar">
+          <Sidebar characterCollection={characterCollection} newSheet={newSheet} deleteChar={this.deleteCharacter} getSpecific={this.getCharacter} />
+        </div>
       </div>
     );
   }
