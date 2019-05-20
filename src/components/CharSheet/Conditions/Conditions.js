@@ -21,208 +21,210 @@ export default function Conditions(props) {
       return <li>{element}</li>;
     });
 
-  let resistsArr = newResistorWeakness.map(element => {
-    return <li>{element}</li>;
-  });
+  let resistsArr = () =>
+    newResistorWeakness.map(element => {
+      return <li>{element}</li>;
+    });
 
-  let featsArr = newFeats.map(element => {
-    return <li>{element}</li>;
-  });
+  let featsArr = () =>
+    newFeats.map(element => {
+      return <li>{element}</li>;
+    });
 
   return (
     <div className="Condition">
       <div className="block1">
-      <div className="Languages">
-        <span>Languages: {newLanguages}</span>
-        <button
-          onClick={() => {
-            if (display === true) {
-              changeHandler("display", false);
-            } else {
-              changeHandler("display", true);
-            }
-          }}
-          >
-          edit
-        </button>
-        {display ? (
-          <div>
-            <input
-              onChange={e => {
-                Name = e.target.value;
-              }}
-              />
-            <button
-              onClick={() => {
+        <div className="Languages">
+          <span>Languages: {newLanguages}</span>
+          <button
+            onClick={() => {
+              if (display === true) {
                 changeHandler("display", false);
-                changeHandler("newLanguages", Name);
-              }}
-              >
-              Save
-            </button>
-          </div>
-        ) : null}
-      </div>
-      <div className="Conditions or Enchantments">
-        <ul>Conditions or Enchantments: {conditionsArr}</ul>
-        <button
-          onClick={() => {
-            if (display === true) {
-              changeHandler("display", false);
-            } else {
-              changeHandler("display", true);
-            }
-          }}
+              } else {
+                changeHandler("display", true);
+              }
+            }}
           >
-          edit
-        </button>
-        {display ? (
-          <div>
-            <input
-              onChange={e => {
-                Name = e.target.value;
-              }}
+            edit
+          </button>
+          {display ? (
+            <div>
+              <input
+                onChange={e => {
+                  Name = e.target.value;
+                }}
               />
-            <button
-              onClick={() => {
-                changeHandler("display", false);
-                pushBot("newConditionsorEnchants", Name);
-              }}
+              <button
+                onClick={() => {
+                  changeHandler("display", false);
+                  changeHandler("newLanguages", Name);
+                }}
               >
-              Save
-            </button>
-          </div>
-        ) : null}
-      </div>
+                Save
+              </button>
+            </div>
+          ) : null}
         </div>
-        <div className="block2">
-      <div className="Resists or Weaknesses">
-        <ul>Resists or Weaknesses: {resistsArr}</ul>
-        <button
-          onClick={() => {
-            if (display === true) {
-              changeHandler("display", false);
-            } else {
-              changeHandler("display", true);
-            }
-          }}
-          >
-          edit
-        </button>
-        {display ? (
-          <div>
-            <input
-              onChange={e => {
-                Name = e.target.value;
-              }}
-              />
-            <button
-              onClick={() => {
+        <div className="Conditions or Enchantments">
+          <ul>Conditions or Enchantments: {conditionsArr}</ul>
+          <button
+            onClick={() => {
+              if (display === true) {
                 changeHandler("display", false);
-                pushBot("newResistorWeakness", Name);
-              }}
-              >
-              Save
-            </button>
-          </div>
-        ) : null}
-      </div>
-      <div className="Deity">
-        <span>Deity: {newDeity}</span>
-        <button
-          onClick={() => {
-            if (display === true) {
-              changeHandler("display", false);
-            } else {
-              changeHandler("display", true);
-            }
-          }}
+              } else {
+                changeHandler("display", true);
+              }
+            }}
           >
-          edit
-        </button>
-        {display ? (
-          <div>
-            <input
-              onChange={e => {
-                Name = e.target.value;
-              }}
+            edit
+          </button>
+          {display ? (
+            <div>
+              <input
+                onChange={e => {
+                  Name = e.target.value;
+                }}
               />
-            <button
-              onClick={() => {
-                changeHandler("display", false);
-                changeHandler("newDeity", Name);
-              }}
+              <button
+                onClick={() => {
+                  changeHandler("display", false);
+                  pushBot("newConditionsorEnchants", Name);
+                }}
               >
-              Save
-            </button>
-          </div>
-        ) : null}
-      </div>
+                Save
+              </button>
+            </div>
+          ) : null}
         </div>
-        <div className="block3">
-      <div className="Feats">
-        <ul>Feats: {featsArr}</ul>
-        <button
-          onClick={() => {
-            if (display === true) {
-              changeHandler("display", false);
-            } else {
-              changeHandler("display", true);
-            }
-          }}
-          >
-          edit
-        </button>
-        {display ? (
-          <div>
-            <input
-              onChange={e => {
-                Name = e.target.value;
-              }}
-              />
-            <button
-              onClick={() => {
-                changeHandler("display", false);
-                pushBot("newFeats", Name);
-              }}
-              >
-              Save
-            </button>
-          </div>
-        ) : null}
       </div>
-      <div className="Familiar">
-        <span>Familiar: Future Project</span>
-        <button
-          onClick={() => {
-            if (display === true) {
-              changeHandler("display", false);
-            } else {
-              changeHandler("display", true);
-            }
-          }}
-          >
-          edit
-        </button>
-        {display ? (
-          <div>
-            <input
-              onChange={e => {
-                Name = e.target.value;
-              }}
-              />
-            <button
-              onClick={() => {
+      <div className="block2">
+        <div className="Resists or Weaknesses">
+          <ul>Resists or Weaknesses: {resistsArr}</ul>
+          <button
+            onClick={() => {
+              if (display === true) {
                 changeHandler("display", false);
-                changeHandler("newFamiliar", Name);
-              }}
+              } else {
+                changeHandler("display", true);
+              }
+            }}
+          >
+            edit
+          </button>
+          {display ? (
+            <div>
+              <input
+                onChange={e => {
+                  Name = e.target.value;
+                }}
+              />
+              <button
+                onClick={() => {
+                  changeHandler("display", false);
+                  pushBot("newResistorWeakness", Name);
+                }}
               >
-              Save
-            </button>
-          </div>
-        ) : null}
-      </div>
+                Save
+              </button>
+            </div>
+          ) : null}
         </div>
+        <div className="Deity">
+          <span>Deity: {newDeity}</span>
+          <button
+            onClick={() => {
+              if (display === true) {
+                changeHandler("display", false);
+              } else {
+                changeHandler("display", true);
+              }
+            }}
+          >
+            edit
+          </button>
+          {display ? (
+            <div>
+              <input
+                onChange={e => {
+                  Name = e.target.value;
+                }}
+              />
+              <button
+                onClick={() => {
+                  changeHandler("display", false);
+                  changeHandler("newDeity", Name);
+                }}
+              >
+                Save
+              </button>
+            </div>
+          ) : null}
+        </div>
+      </div>
+      <div className="block3">
+        <div className="Feats">
+          <ul>Feats: {featsArr}</ul>
+          <button
+            onClick={() => {
+              if (display === true) {
+                changeHandler("display", false);
+              } else {
+                changeHandler("display", true);
+              }
+            }}
+          >
+            edit
+          </button>
+          {display ? (
+            <div>
+              <input
+                onChange={e => {
+                  Name = e.target.value;
+                }}
+              />
+              <button
+                onClick={() => {
+                  changeHandler("display", false);
+                  pushBot("newFeats", Name);
+                }}
+              >
+                Save
+              </button>
+            </div>
+          ) : null}
+        </div>
+        <div className="Familiar">
+          <span>Familiar: Future Project</span>
+          <button
+            onClick={() => {
+              if (display === true) {
+                changeHandler("display", false);
+              } else {
+                changeHandler("display", true);
+              }
+            }}
+          >
+            edit
+          </button>
+          {display ? (
+            <div>
+              <input
+                onChange={e => {
+                  Name = e.target.value;
+                }}
+              />
+              <button
+                onClick={() => {
+                  changeHandler("display", false);
+                  changeHandler("newFamiliar", Name);
+                }}
+              >
+                Save
+              </button>
+            </div>
+          ) : null}
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,20 +1,19 @@
-import React from "react"
-import "./Attack.css"
+import React from "react";
+import "./Attack.css";
 
 export default function Attacks(props) {
-    let { newAttacks, pushBot, display, changeHandler } = props
-    let Name
-    let attacksArr = newAttacks.map(element => {
-        return <li>{element}</li>
-    })
+  let { newAttacks, pushBot, display, changeHandler } = props;
+  let Name;
+  let attacksArr = () =>
+    newAttacks.map(element => {
+      return <li>{element}</li>;
+    });
 
-    return (
-        <div className="attackWrapper">
-            <div className="Attacks">
-                <ul>
-                    Attacks: {attacksArr}
-                </ul>
-                <button
+  return (
+    <div className="attackWrapper">
+      <div className="Attacks">
+        <ul>Attacks: {attacksArr}</ul>
+        <button
           onClick={() => {
             if (display === true) {
               changeHandler("display", false);
@@ -42,7 +41,7 @@ export default function Attacks(props) {
             </button>
           </div>
         ) : null}
-            </div>
-        </div>
-    )
+      </div>
+    </div>
+  );
 }

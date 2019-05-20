@@ -38,27 +38,21 @@
     "Deity": "",
     "Familiar": {},
     "Attacks": [
-      {
-        "Name": "Longbow",
-        "toHit": "+10",
-        "Damage": "1d8+5 piercing",
-        "Range": "150(600)",
-        "Notes": "Martial, Ammunition, Heavy, Ranged, Two-Handed"
-      },
-      {
-        "Name": "Scimitar",
-        "toHit": "+8",
-        "Damage": "1d6+5 slashing",
-        "Range": "5ft",
-        "Notes": "Martial, Finesse, Light"
-      },
-      {
-        "Name": "Unarmed Strike",
-        "toHit": "+3",
-        "Damage": "1 blunt",
-        "Range": "5ft",
-        "Nontes": ""
-      }
+      "Name: Longbow",
+      "toHit: +10",
+      "Damage: 1d8+5 piercing",
+      "Range: 150(600)",
+      "Notes: Martial, Ammunition, Heavy, Ranged, Two-Handed",
+      "Name: Scimitar",
+      "toHit: +8",
+      "Damage: 1d6+5 slashing",
+      "Range: 5ft",
+      "Notes: Martial, Finesse, Light",
+      "Name: Unarmed Strike",
+      "toHit: +3",
+      "Damage: 1 blunt",
+      "Range: 5ft",
+      "Notes: "
     ],
     "Inventory": [
       "Backpack, 5lb, 1, 2, container",
@@ -67,13 +61,8 @@
       "Handaxe, 2lb, 2, 5, weapon",
       "Leather armour, 10lb, 1, 10, AC 11+dex mod"
     ],
-    "Spells": [{}],
-    "Wealth": {
-      "Plat": 2,
-      "Gold": 100,
-      "Silver": 0,
-      "Copper": 0
-    }
+    "Spells": [],
+    "Wealth": ["Platinum: 2", "Gold: 100", "Silver: 0", "Copper: 0"]
   },
   {
     "id": 2,
@@ -106,27 +95,21 @@
     "Deity": "",
     "Familiar": {},
     "Attacks": [
-      {
-        "Name": "mwk Cane",
-        "toHit": "+3",
-        "Damage": "1d6",
-        "Range": "5ft",
-        "Notes": "Arcane Bond"
-      },
-      {
-        "Name": "dagger",
-        "toHit": "+2",
-        "Damage": "1d4",
-        "Range": "5ft",
-        "Notes": "Finesse"
-      },
-      {
-        "Name": "light crossbow",
-        "toHit": "+4",
-        "Damage": "1d8",
-        "Range": "19-20",
-        "Notes": "Finesse"
-      }
+      "Name: mwk Cane",
+      "toHit: +3",
+      "Damage: 1d6",
+      "Range: 5ft",
+      "Notes: Arcane Bond",
+      "Name: dagger",
+      "toHit: +2",
+      "Damage: 1d4",
+      "Range: 5ft",
+      "Notes: Finesse",
+      "Name: light crossbow",
+      "toHit: +4",
+      "Damage: 1d8",
+      "Range: 19-20",
+      "Notes: Finesse"
     ],
     "Inventory": [
       "oil of magic weapon",
@@ -147,111 +130,84 @@
       "spellbook"
     ],
     "Spells": [
-      {
-        "Name": "acid splash",
-        "SpellLevel": 0,
-        "CastTime": "standard action",
-        "Range": "25ft +5ft/2 levels",
-        "Components": "none",
-        "Duration": "instant",
-        "Description": "fire a small orb of acid at the target for 1d3 damage"
-      },
-      {
-        "Name": "detect magic",
-        "SpellLevel": 0,
-        "CastTime": "standard action",
-        "Range": "60ft",
-        "Components": "none",
-        "Duration": "concentration, up to 1min",
-        "Description": "you detect magical auras and recieve info based on how long you study"
-      },
-      {
-        "Name": "light",
-        "SpellLevel": 0,
-        "CastTime": "standard action",
-        "Range": "touch",
-        "Components": "none",
-        "Duration": "10min/level",
-        "Description": "causes a touched object to glow like a torch"
-      },
-      {
-        "Name": "mage hand",
-        "SpellLevel": 0,
-        "CastTime": "standard action",
-        "Range": "25ft +5ft/2 levels",
-        "Components": "none",
-        "Duration": "concentration",
-        "Description": "5 pound telekinesis within range"
-      },
-      {
-        "Name": "burning hands",
-        "SpellLevel": 1,
-        "CastTime": "standard action",
-        "Range": "15 ft cone",
-        "Components": "V, S",
-        "Duration": "instant",
-        "Description": "any character within the cone takes 1d4 firedamage per caster level (max 5d4)"
-      },
-      {
-        "Name": "mage armour",
-        "SpellLevel": 1,
-        "CastTime": "standard action",
-        "Range": "touch",
-        "Components": "V, S, F (a piece of cured leather)",
-        "Duration": "1hour/level",
-        "Description": "An invisible yet tangible field of force surrounds the subject, providing +4AC"
-      },
-      {
-        "Name": "magic missile",
-        "SpellLevel": 1,
-        "CastTime": "standard action",
-        "Range": "100ft + 10ft/level",
-        "Components": "V, S",
-        "Duration": "instant",
-        "Description": "2 missiles of magic energy darts forth and strikes the target for 1d4+1 force damage"
-      },
-      {
-        "Name": "obscuring mist",
-        "SpellLevel": 1,
-        "CastTime": "standard action",
-        "Range": "20ft square centered on you",
-        "Components": "V, S",
-        "Duration": "1min/level",
-        "Description": "A misty vapor arises around you obscuring all sight in the AoE"
-      },
-      {
-        "Name": "glitterdust",
-        "SpellLevel": 2,
-        "CastTime": "standard action",
-        "Range": "100ft + 10ft/level, 10 foot wide ray",
-        "Components": "V, S, F (ground mica)",
-        "Duration": "1round/level",
-        "Description": "a cloud of golden particles covers everyone and everything in the area, causing creatures to become blinded and visibly outlining invisible things for the duration."
-      },
-      {
-        "Name": "scorching ray",
-        "SpellLevel": 2,
-        "CastTime": "standard action",
-        "Range": "25ft +5ft/2 levels",
-        "Components": "V, S",
-        "Duration": "instant",
-        "Description": "you blast your enemies with searing beams of fire dealing 4d6 firedamage with each ray"
-      },
-      {
-        "Name": "spider climb",
-        "SpellLevel": 2,
-        "CastTime": "standard action",
-        "Range": "touch",
-        "Components": "V, S, F (a live spider)",
-        "Duration": "10min/level",
-        "Description": "the subject can climb and travel on vertical surfaces or even traverse ceilings as well as a spider does"
-      }
+      "Name: acid splash",
+      "SpellLevel: 0",
+      "CastTime: standard action",
+      "Range: 25ft +5ft/2 levels",
+      "Components: none",
+      "Duration: instant",
+      "Description: fire a small orb of acid at the target for 1d3 damage",
+      "Name: detect magic",
+      "SpellLevel: 0",
+      "CastTime: standard action",
+      "Range: 60ft",
+      "Components: none",
+      "Duration: concentration, up to 1min",
+      "Description: you detect magical auras and recieve info based on how long you study",
+      "Name: light",
+      "SpellLevel: 0",
+      "CastTime: standard action",
+      "Range: touch",
+      "Components: none",
+      "Duration: 10min/level",
+      "Description: causes a touched object to glow like a torch",
+      "Name: mage hand",
+      "SpellLevel: 0",
+      "CastTime: standard action",
+      "Range: 25ft +5ft/2 levels",
+      "Components: none",
+      "Duration: concentration",
+      "Description: 5 pound telekinesis within range",
+      "Name: burning hands",
+      "SpellLevel: 1",
+      "CastTime: standard action",
+      "Range: 15 ft cone",
+      "Components: V, S",
+      "Duration: instant",
+      "Description: any character within the cone takes 1d4 firedamage per caster level (max 5d4)",
+      "Name: mage armour",
+      "SpellLevel: 1",
+      "CastTime: standard action",
+      "Range: touch",
+      "Components: V, S, F (a piece of cured leather)",
+      "Duration: 1hour/level",
+      "Description: An invisible yet tangible field of force surrounds the subject, providing +4AC",
+      "Name: magic missile",
+      "SpellLevel: 1",
+      "CastTime: standard action",
+      "Range: 100ft + 10ft/level",
+      "Components: V, S",
+      "Duration: instant",
+      "Description: 2 missiles of magic energy darts forth and strikes the target for 1d4+1 force damage",
+      "Name: obscuring mist",
+      "SpellLevel: 1",
+      "CastTime: standard action",
+      "Range: 20ft square centered on you",
+      "Components: V, S",
+      "Duration: 1min/level",
+      "Description: A misty vapor arises around you obscuring all sight in the AoE",
+      "Name: glitterdust",
+      "SpellLevel: 2",
+      "CastTime: standard action",
+      "Range: 100ft + 10ft/level, 10 foot wide ray",
+      "Components: V, S, F (ground mica)",
+      "Duration: 1round/level",
+      "Description: a cloud of golden particles covers everyone and everything in the area, causing creatures to become blinded and visibly outlining invisible things for the duration.",
+      "Name: scorching ray",
+      "SpellLevel: 2",
+      "CastTime: standard action",
+      "Range: 25ft +5ft/2 levels",
+      "Components: V, S",
+      "Duration: instant",
+      "Description: you blast your enemies with searing beams of fire dealing 4d6 firedamage with each ray",
+      "Name: spider climb",
+      "SpellLevel: 2",
+      "CastTime: standard action",
+      "Range: touch",
+      "Components: V, S, F (a live spider)",
+      "Duration: 10min/level",
+      "Description: the subject can climb and travel on vertical surfaces or even traverse ceilings as well as a spider does"
     ],
-    "Wealth": {
-      "Plat": 0,
-      "Gold": 65,
-      "Silver": 20,
-      "Copper": 5
-    }
+    "Wealth": ["Plat: 0", "Gold: 65", "Silver: 20", "Copper: 5"]
   }
 ]
