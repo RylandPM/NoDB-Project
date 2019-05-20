@@ -138,7 +138,7 @@ export default class Sheet extends Component {
       newWealth,
       display
     } = this.state;
-
+    console.log(newFeats);
     return (
       <div className="CharacterSheet">
         <div className="Header">

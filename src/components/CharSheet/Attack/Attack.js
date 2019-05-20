@@ -4,10 +4,9 @@ import "./Attack.css";
 export default function Attacks(props) {
   let { newAttacks, pushBot, display, changeHandler } = props;
   let Name;
-  let attacksArr = () =>
-    newAttacks.map(element => {
-      return <li>{element}</li>;
-    });
+  let attacksArr = newAttacks.map(element => {
+    return <li>{element}</li>;
+  });
 
   return (
     <div className="attackWrapper">

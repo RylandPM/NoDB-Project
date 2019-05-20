@@ -16,20 +16,19 @@ export default function Conditions(props) {
   } = props;
   let Name;
 
-  let conditionsArr = () =>
-    newConditionsorEnchants.map(element => {
-      return <li>{element}</li>;
-    });
+  console.log(props);
 
-  let resistsArr = () =>
-    newResistorWeakness.map(element => {
-      return <li>{element}</li>;
-    });
+  let conditionsArr = newConditionsorEnchants.map(element => {
+    return <li>{element}</li>;
+  });
 
-  let featsArr = () =>
-    newFeats.map(element => {
-      return <li>{element}</li>;
-    });
+  let resistsArr = newResistorWeakness.map(element => {
+    return <li>{element}</li>;
+  });
+
+  // let featsArr = newFeats.map(element => {
+  //   return <li>{element}</li>;
+  // });
 
   return (
     <div className="Condition">
@@ -163,7 +162,7 @@ export default function Conditions(props) {
       </div>
       <div className="block3">
         <div className="Feats">
-          <ul>Feats: {featsArr}</ul>
+          {/* <ul>Feats: {featsArr}</ul> */}
           <button
             onClick={() => {
               if (display === true) {

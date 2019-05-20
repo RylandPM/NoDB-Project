@@ -4,7 +4,6 @@ import "./App.css";
 import axios from "axios";
 import CharSheet from "./components/CharSheet/CharSheet";
 import Sidebar from "./components/Sidebar/Sidebar";
-import Sheet from "./components/CharSheet/CharSheet";
 
 export default class App extends Component {
   constructor(props) {
@@ -59,21 +58,31 @@ export default class App extends Component {
   }
 
   myCharacterCollection() {
-    axios.get("/api/char_sheets").then(response => {
-      this.setState({
-        characterCollection: response.data
+    axios
+      .get("/api/char_sheets")
+      .then(response => {
+        this.setState({
+          characterCollection: response.data
+        });
+      })
+      .catch(error => {
+        console.log(error.response);
       });
-    });
     console.log(this.state.characterCollection);
   }
 
   getCharacter(id) {
-    axios.get(`/api/char_sheets/${id}`).then(response => {
-      this.setState({
-        newSheet: response.data
+    axios
+      .get(`/api/char_sheets/${id}`)
+      .then(response => {
+        this.setState({
+          newSheet: response.data
+        });
+      })
+      .catch(error => {
+        console.log(error.response);
+        console.log(this.state.newSheet);
       });
-      console.log(this.state.newSheet);
-    });
   }
 
   postNewCharacter(newSheet) {

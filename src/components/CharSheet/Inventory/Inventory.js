@@ -12,14 +12,12 @@ export default function Inventory(props) {
     display
   } = props;
   let Name;
-  let inventoryArr = () =>
-    newInventory.map(element => {
-      return <li>{element}</li>;
-    });
-  let spellsArr = () =>
-    newSpells.map(element => {
-      return <li>{element}</li>;
-    });
+  let inventoryArr = newInventory.map(element => {
+    return <li>{element}</li>;
+  });
+  let spellsArr = newSpells.map(element => {
+    return <li key={element.toString}>{element}</li>;
+  });
 
   return (
     <div className="InventoryBlock">
